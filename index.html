@@ -24,3 +24,47 @@
     </div>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play Music</title>
+    <style>
+      .play-button {
+        width: 50px;
+        height: 50px;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="play-button" onclick="playMusic()">Play</button>
+      <audio id="myAudio">
+        <source src="Dekho Na Dekho Na _🥀New Hindi Black Screen Status❤️Sad Song Status _Iam__ayaz019(MP3_160K).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <script>
+      function playMusic() {
+        var audio = document.getElementById("myAudio");
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      }
+    </script>
+  </body>
+</html>
