@@ -1,205 +1,63 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Her Out</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tenor-gif-embed" data-postid="13865460852719354392"
+        data-share-method="host" data-aspect-ratio="1" data-width="100%"><a 
+        href="https://tenor.com/view/i-love-you-gif-13865460852719354392">I Love You Sticker</a>from <a 
+        href="https://tenor.com/search/i+love+you-stickers">I Love You Stickers</a></div> <script type="text/javascript" 
+        async src="https://tenor.com/embed.js"></script>
+      <h1>Will You be my Valentine? 🤗</h1>
+      <p> I Know Tu Naa Bolegi 🤕.</p>
+
+      <div class="btn">
+        <a href="yes.html">Yes</a>
+        <a href="no1.html">No</a>
+      </div>
+
+      <!DOCTYPE html>
 <html>
 <head>
-<title>Ask Her Out</title>
+<title>Centered Text Box</title>
 <style>
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f0e6d2; /* Light beige background */
-  font-family: 'Comic Neue', cursive;
-  margin: 0;
-}
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4; /* Light background */
+  }
 
-.div-container{
-  width: 70%;
-  max-width: 800px;
-  background-color: #fff;
-  padding: 40px;
-  border: 2px solid #d2b48c; /* Light brown border */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  border-radius: 10px;
-}
+  .text-box {
+    width: 60%; /* Adjust width as needed */
+    max-width: 500px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif; /* Use a good sans-serif font */
+    font-size: 1.1em;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-.p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  white-space: pre-wrap; /* Preserve line breaks */
-  overflow: hidden; /* Hide the full text initially */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  margin-bottom: 30px;
-}
+  /* Google Fonts link */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-.button {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #d2b48c;
-  color: white;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #b1946f;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
-
-.p.typing-animation {
-  animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: .15em solid orange;
-}
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="div-container">
-  <p id="message" class="typing-animation"></p>
-  <div class="button-container">
-    <button onclick="location.href='yes.html'">Yes</button>
-    <button onclick="location.href='no1.html'">No</button>
+  <div class="text-box">
+    This is a centered text box with a clean, readable font.
   </div>
-</div>
-
-<script>
-const message = "Dearest friend,\n\nI have a secret to share with you...\n\nAre you ready to discover it?";
-const messageElement = document.getElementById('message');
-
-messageElement.textContent = message;
-
-// Remove typing animation after it finishes.
-setTimeout(function() {
-  messageElement.classList.remove('typing-animation');
-  messageElement.style.borderRight = 'none'; //remove blinking cursor
-}, 4000); // 4 seconds (matching the animation duration)
-
-</script>
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-<title>A Secret Message</title>
-<style>
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f0e6d2; /* Light beige background */
-  font-family: 'Comic Neue', cursive;
-  margin: 0;
-}
-
-.div-container{
-  width: 70%;
-  max-width: 800px;
-  background-color: #fff;
-  padding: 40px;
-  border: 2px solid #d2b48c; /* Light brown border */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  border-radius: 10px;
-}
-
-.p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  white-space: pre-wrap; /* Preserve line breaks */
-  overflow: hidden; /* Hide the full text initially */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  margin-bottom: 30px;
-}
-
-.button {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #d2b48c;
-  color: white;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #b1946f;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
-
-.p.typing-animation {
-  animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: .15em solid orange;
-}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<div class="div-container">
-  <p id="message" class="typing-animation"></p>
-  <div class="button-container">
-    <button onclick="location.href='page1.html'">Yes</button>
-    <button onclick="location.href='page2.html'">No</button>
-  </div>
-</div>
-
-<script>
-const message = "Dearest friend,\n\nI have a secret to share with you...\n\nAre you ready to discover it?";
-const messageElement = document.getElementById('message');
-
-messageElement.textContent = message;
-
-// Remove typing animation after it finishes.
-setTimeout(function() {
-  messageElement.classList.remove('typing-animation');
-  messageElement.style.borderRight = 'none'; //remove blinking cursor
-}, 4000); // 4 seconds (matching the animation duration)
-
-</script>
 
 </body>
 </html>
