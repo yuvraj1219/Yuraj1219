@@ -8,7 +8,80 @@
   </head>
   <body>
     <div class="container">
-      
+      <!DOCTYPE html>
+<html>
+<head>
+<title>Typing Text Box</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: 'Comic Neue', cursive; /* Use a humanized comic font */
+  }
+
+  .text-box {
+    width: 60%;
+    max-width: 500px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap; /* Preserve line breaks */
+    overflow: hidden; /* Hide the full text initially */
+    border-right: .15em solid orange; /* The typwriter cursor */
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  .typing-animation {
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid orange;
+  }
+
+  /* Google Fonts link */
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+</style>
+</head>
+<body>
+
+  <div class="text-box" id="typingText"></div>
+
+  <script>
+    const text = "Hello there!\n\nThis is a typing animation in a text box.\n\nIt's like someone is typing it out for you.";
+    const textBox = document.getElementById('typingText');
+
+    textBox.textContent = text;
+    textBox.classList.add('typing-animation');
+
+    //Remove typing animation after it finishes.
+    setTimeout(function() {
+      textBox.classList.remove('typing-animation');
+      textBox.style.borderRight = 'none'; //remove blinking cursor
+    }, 4000); // 4 seconds (matching the animation duration)
+  </script>
+
+</body>
+</html>
       <h1>Will You be my Valentine? 🤗</h1>
       <p> I Know Tu Naa Bolegi 🤕.</p>
 
