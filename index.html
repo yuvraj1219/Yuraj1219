@@ -66,74 +66,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Heart Play Button</title>
+<title>Heart Audio Button</title>
 <style>
-  #playButton {
+  #heartButton {
     position: absolute;
-    top: 20px; /* Adjust top position as needed */
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
+    width: 50px;
+    height: 50px;
     background-color: transparent;
     border: none;
     cursor: pointer;
     font-size: 0; /* Hide default button text */
     padding: 0;
-    margin: 0;
   }
 
-  #playButton::before,
-  #playButton::after {
+  #heartButton::before,
+  #heartButton::after {
     position: absolute;
     content: "";
-    left: 30px;
+    left: 25px;
     top: 0;
-    width: 30px;
-    height: 50px;
-    background-color: red;
-    border-radius: 50px 50px 0 0;
+    width: 25px;
+    height: 40px;
+    background: red;
+    border-radius: 25px 25px 0 0;
     transform: rotate(-45deg);
     transform-origin: 0 100%;
   }
 
-  #playButton::after {
+  #heartButton::after {
     left: 0;
     transform: rotate(45deg);
     transform-origin: 100% 100%;
-  }
-
-  #playButton.playing::before,
-  #playButton.playing::after {
-    background-color: darkred;
   }
 </style>
 </head>
 <body>
 
-  <button id="playButton"></button>
+<button id="heartButton"></button>
 
-  <audio id="myAudio" src="Dekho Na Dekho Na _🥀New Hindi Black Screen Status❤️Sad Song Status _Iam__ayaz019(MP3_160K).mp3"></audio>
+<audio id="myAudio" src="Dekho Na Dekho Na _🥀New Hindi Black Screen Status❤️Sad Song Status _Iam__ayaz019(MP3_160K).mp3"></audio>
 
-  <script>
-    const playButton = document.getElementById('playButton');
-    const audio = document.getElementById('myAudio');
+<script>
+  const heartButton = document.getElementById('heartButton');
+  const myAudio = document.getElementById('myAudio');
 
-    playButton.addEventListener('click', function() {
-      if (audio.paused) {
-        audio.play();
-        playButton.classList.add('playing');
-      } else {
-        audio.pause();
-        playButton.classList.remove('playing');
-      }
-    });
+  heartButton.addEventListener('click', function() {
+    if (myAudio.paused) {
+      myAudio.play();
+    } else {
+      myAudio.pause();
+    }
+  });
 
-    audio.addEventListener('ended', function() {
-        playButton.classList.remove('playing');
-    });
+  heartButton.addEventListener('touchstart', function() {
+    if (myAudio.paused) {
+      myAudio.play();
+    } else {
+      myAudio.pause();
+    }
+  });
 
-  </script>
+</script>
 
 </body>
 </html>
