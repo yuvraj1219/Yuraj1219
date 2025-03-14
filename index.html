@@ -63,3 +63,77 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Heart Play Button</title>
+<style>
+  #playButton {
+    position: absolute;
+    top: 20px; /* Adjust top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0; /* Hide default button text */
+    padding: 0;
+    margin: 0;
+  }
+
+  #playButton::before,
+  #playButton::after {
+    position: absolute;
+    content: "";
+    left: 30px;
+    top: 0;
+    width: 30px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+
+  #playButton::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+
+  #playButton.playing::before,
+  #playButton.playing::after {
+    background-color: darkred;
+  }
+</style>
+</head>
+<body>
+
+  <button id="playButton"></button>
+
+  <audio id="myAudio" src="your_audio.mp3"></audio>
+
+  <script>
+    const playButton = document.getElementById('playButton');
+    const audio = document.getElementById('myAudio');
+
+    playButton.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play();
+        playButton.classList.add('playing');
+      } else {
+        audio.pause();
+        playButton.classList.remove('playing');
+      }
+    });
+
+    audio.addEventListener('ended', function() {
+        playButton.classList.remove('playing');
+    });
+
+  </script>
+
+</body>
+</html>
