@@ -35,3 +35,54 @@
     </div>
   </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Autoplay Audio</title>
+</head>
+<body>
+
+<audio id="myAudio" controls autoplay loop muted>
+  <source src="Dekho Na Dekho Na _🥀New Hindi Black Screen Status❤️Sad Song Status _Iam__ayaz019(MP3_160K).mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+//Optional: Unmute after a short delay to satisfy some browser autoplay policies.
+document.addEventListener('DOMContentLoaded', function() {
+  const audio = document.getElementById('myAudio');
+
+  // Check if autoplay is allowed (some browsers block it)
+  const playPromise = audio.play();
+
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+      // Autoplay started!
+      setTimeout(function() {
+        audio.muted = false; //Unmute after a short delay.
+      }, 1000); // 1 second delay
+    }).catch(error => {
+      // Autoplay was prevented.
+      console.error("Autoplay prevented:", error);
+      // provide a play button
+      const playButton = document.createElement('button');
+      playButton.textContent = 'Play Audio';
+      document.body.appendChild(playButton);
+
+      playButton.addEventListener('click', function() {
+        audio.play();
+        audio.muted = false;
+        playButton.style.display = 'none'; //hide play button after click.
+      });
+
+      audio.muted = false; // If the user clicks play, unmute.
+    });
+  } else {
+      audio.muted = false; //For older browsers that dont return a promise.
+  }
+});
+
+</script>
+
+</body>
+  </html>
